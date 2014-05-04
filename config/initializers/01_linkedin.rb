@@ -1,1 +1,0 @@
-LINKEDIN_CONFIG = YAML.load_file("#{::Rails.root}/config/linkedin.yml")[::Rails.env]

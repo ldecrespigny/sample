@@ -14,6 +14,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-linkedin'
 gem 'omniauth-github'
+gem 'figaro'
 
 
 gem 'bootstrap-sass', '~> 3.1.1'
