@@ -1,0 +1,11 @@
+development:
+  app_id: 770q6qri4knsqx
+  secret: 2yifIAVOrs6eaHTs
+
+test:
+  app_id: 770q6qri4knsqx
+  secret: 2yifIAVOrs6eaHTs
+
+production:
+  app_id: 770q6qri4knsqx
+  secret: 2yifIAVOrs6eaHTs
