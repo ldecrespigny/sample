@@ -11,6 +11,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'devise'
 gem 'omniauth-twitter'
+gem 'omniauth-linkedin'
+gem 'omniauth-github'
+
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
