@@ -1,0 +1,25 @@
+
+# Convert this to a YAML file for your rails app, and load your configuration in an 
+# environment-specific way, eg YAML.load_file('config/oauth.yml')[Rails.env]
+config = YAML.load(<<EOS
+linkedin-example:
+  api_host: https://api.linkedin.com
+  request_token_path: /uas/oauth/requestToken
+  access_token_path: /uas/oauth/accessToken
+  authorize_path: /uas/oauth/authorize
+  consumer_key: 770q6qri4knsqx
+  consumer_secret: 2yifIAVOrs6eaHTs
+EOS
+)
+
+oauth_options = config['linkedin-example']
+
+# Set up LinkedIn specific OAuth API endpoints
+consumer_options = { :site => oauth_options['api_host'],
+                     :authorize_path => oauth_options['authorize_path'],
+                     :request_token_path => oauth_options['request_token_path'],
+                     :access_token_path => oauth_options['access_token_path'] }
+
+consumer = OAuth::Consumer.new(oauth_options['consumer_key'], oauth_options['consumer_secret'], consumer_options)
+
+

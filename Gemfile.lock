@@ -72,6 +72,7 @@ GEM
     multi_json (1.9.3)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    netrc (0.7.7)
     oauth (0.4.7)
     oauth2 (0.9.3)
       faraday (>= 0.8, < 0.10)
@@ -127,6 +128,8 @@ GEM
     rake (10.3.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    rest_client (1.7.3)
+      netrc (~> 0.7.7)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -173,6 +176,7 @@ DEPENDENCIES
   figaro
   jbuilder (~> 2.0)
   jquery-rails
+  json
   omniauth
   omniauth-github
   omniauth-linkedin
@@ -180,6 +184,7 @@ DEPENDENCIES
   pg
   rails (= 4.1.0)
   rails_12factor
+  rest_client
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
