@@ -1,0 +1,19 @@
+
+
+<% if user_signed_in? %>
+
+        <%= current_user.email %><br>
+        <%= current_user.username %><br>
+        <%= current_user.description %><br>
+        <%= current_user.uid %><br>
+        <%= link_to "linkedin profile", current_user.urls,:target => "_blank" %><br>
+        <%= current_user.token %><br>
+        <%= current_user.secret %><br>
+
+
+
+<% else %>
+
+<%= render 'pages/home' %>
+
+<% end %>

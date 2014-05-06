@@ -1,6 +1,19 @@
 <div class="jumbotron center">
      <h1>Welcome to my app!</h1>
+     <% if user_signed_in? %>
+          
 
+        <%= current_user.email %><br>
+        <%= current_user.username %><br>
+        <%= current_user.description %><br>
+        <%= current_user.uid %><br>
+        <%= current_user.urls %><br>
+        <%= current_user.token %><br>
+        <%= current_user.secret %><br>
+
+
+
+     <% else %>
        <p>
          <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
          <%= link_to "Log in with Linkedin", user_omniauth_authorize_path(:linkedin), class: "btn btn-default btn-lg" %>
@@ -14,6 +27,6 @@
        </p>
 
 
-
+  <% end %>  
 </div>
 
